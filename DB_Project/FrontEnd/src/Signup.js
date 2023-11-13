@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from "react-router-dom";
 import Validation from './SignupValidation'
+import axios from "axios";
 
 function Signup()
 {
@@ -16,6 +17,10 @@ function Signup()
     const handleSubmit = (event) => {
         event.preventDefault();
         setValues(Validation(values));
+        if(errors.name === "" && errors.email === "" && errors.password === "")
+        {
+            axios
+        }
     }
 
     return(
