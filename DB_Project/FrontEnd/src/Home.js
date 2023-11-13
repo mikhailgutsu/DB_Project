@@ -1,11 +1,8 @@
 import React from 'react';
 import pickImage from './assets/pick.jpg';
+import { Link, useNavigate } from 'react-router-dom'
 
 function Home() {
-    const handleButtonClick = (buttonText) => {
-        alert(`Вы нажали на кнопку: ${buttonText}`);
-    };
-
     const containerStyle = {
         background: `url(${pickImage})`,
         backgroundSize: 'cover',
@@ -19,23 +16,19 @@ function Home() {
 
     const buttonStyle = {
         position: 'absolute',
-        top: '100px',
-        left: '50px',
+        top: '565px',
+        left: '990px',
     };
 
     const headingStyle = {
-        fontSize: '36px', // Размер шрифта
+        fontSize: '80px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
     };
-
     return (
         <div style={containerStyle}>
-            <h1 style={headingStyle}>Home</h1>
-            <button
-                style={buttonStyle}
-                onClick={() => handleButtonClick("Кнопка 1")}
-            >
-                Hotel
-            </button>
+            <h1 style={headingStyle}>Hotel</h1>
+            <Link to="/Welcome" className='btn btn-default border bg-light text-decoration-none' style={buttonStyle}> Next </Link>
         </div>
     );
 }
