@@ -29,8 +29,8 @@ app.post('/signup', (req, res) =>
     })
 })
 app.post('/login',[
-    check('email', "Emaill length error").isEmail().isLength({min: 10, max:30}),
-    check('password', "password length 8-10").isLength({min: 8, max: 30})
+    check('email', "Email length error").isEmail().isLength({min: 10, max:30}),
+    check('password', "password length 1-30").isLength({min: 1, max: 30})
     ]
     , (req, res) =>
 {
@@ -54,7 +54,7 @@ app.post('/login',[
         }
         else
         {
-            return res.json("Faile");
+            return res.json("Fail");
         }
     }
     })
