@@ -1,5 +1,5 @@
+const bcrypt = require('bcrypt');
 const express = require("express");
-
 const mysql = require('mysql');
 
 const cors = require('cors');
@@ -15,50 +15,42 @@ const db = mysql.createConnection(
         password: "",
         database: "signup"
     })
-app.post('/signup', (req, res) =>
-{
-    const sql = "INSERT INTO login (name,email,password) VALUES (?)";
-    const values = [        req.body.name,        req.body.email,        req.body.password    ]
-    db.query(sql, [values], (err, data) =>
-    {
-        if(err)
-        {
-            return res.json("Error");
-        }
-        return res.json(data);
-    })
-})
-app.post('/login',[
-    check('email', "Email length error").isEmail().isLength({min: 10, max:30}),
-    check('password', "password length 1-30").isLength({min: 1, max: 30})
-    ]
-    , (req, res) =>
-{
-    const sql = "SELECT * FROM login WHERE email = ? AND password = ?";
-    db.query(sql, [req.body.email,req.body.password ], (err, data) =>
-    {
-    const errors = validationResult(req);
-    if(!errors.isEmpty())
-    {
-        return res.json(errors);
+// При обработке регистрации
+app.post('/signup', async (req, res) => {
+    try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10); // Хеширование пароля
+        const sql = "INSERT INTO login (name, email, password) VALUES ?";
+        const values = [[req.body.name, req.body.email, hashedPassword]];
+        db.query(sql, [values], (err, data) => {
+            if (err) {
+                return res.json("Error");
+            }
+            return res.json(data);
+        });
+    } catch (err) {
+        return res.json("Error");
     }
-    else
-    {
-        if(err)
-        {
+});
+
+// При обработке входа
+app.post('/login', async (req, res) => {
+    const sql = "SELECT * FROM login WHERE email = ?";
+    db.query(sql, [req.body.email], async (err, data) => {
+        if (err) {
             return res.json("Error");
         }
-        if(data.length > 0)
-        {
-            return res.json("Success");
-        }
-        else
-        {
+        if (data.length > 0) {
+            const match = await bcrypt.compare(req.body.password, data[0].password); // Сравнение хеша пароля
+            if (match) {
+                return res.json("Success");
+            } else {
+                return res.json("Fail");
+            }
+        } else {
             return res.json("Fail");
         }
-    }
-    })
-})
+    });
+});
 app.listen(8081, ()=>
 {
     console.log("listening");
