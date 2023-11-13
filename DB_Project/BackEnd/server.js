@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const db = mysql.createConnection(
     {
@@ -35,6 +36,6 @@ app.post('/signup', (req,res) =>
 
 app.listen(8081, ()=>
     {
-        console.log("listning");
+        console.log("listening");
     }
 )
