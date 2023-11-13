@@ -7,24 +7,29 @@ const db = mysql.createConnection(
     {
         host: "localhost",
         user: "root",
-        password: "",
-        database: "signup"})
+        password: "root",
+        database: "project"})
+
 app.post('/signup', (req, res) =>
 {
-    const sql = "INSERT INTO login (name,email,password) VALUES (?)";
+    const sql = "INSERT INTO login (name, email, password) VALUES (?, ?, ?)";
     const values = [
         req.body.name,
         req.body.email,
         req.body.password
     ]
-    db.query(sql, [values], (err, data) =>
-    {
-        if(err)
-        {
-            return res.json("Error");
+    db.query(sql, [req.body.name, req.body.email, req.body.password], (err, data) => {
+        if (err) {
+            console.error("Error:", err);
+            return res.status(500).json({ error: "An error occurred" });
         }
+        console.log("Data inserted into the database:");
+        console.log("Name:", req.body.name);
+        console.log("Email:", req.body.email);
+        console.log("Password:", req.body.password);
+
         return res.json(data);
-    })
+    });
 })
 app.post('/login',[    check('email', "Emaill length error").isEmail().isLength({min: 10, max:30}),
     check('password', "password length 8-10").isLength({min: 8, max: 10})],
