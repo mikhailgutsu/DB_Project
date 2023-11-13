@@ -1,12 +1,11 @@
 import React from 'react'
 import Login from './Login'
-import {BrowserRouter, Routes, Route } from "react-router-dom";
-import Signup from "./Signup";
-import Home from "./Home"
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Signup from './Signup'
+import Home from './Home'
 function App()
 {
-    return(
+    return (
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Login />}></Route>
@@ -16,5 +15,4 @@ function App()
         </BrowserRouter>
     )
 }
-
 export default App
