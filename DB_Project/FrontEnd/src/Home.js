@@ -16,8 +16,8 @@ function Home() {
 
     const buttonStyle = {
         position: 'absolute',
-        top: '565px',
-        left: '990px',
+        top: '500px',
+        left: '720px',
     };
 
     const headingStyle = {
@@ -25,9 +25,15 @@ function Home() {
         color: 'white', // Задает белый цвет текста
         textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
     };
+    const headingStyleTMP = {
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
+    };
     return (
         <div style={containerStyle}>
             <h1 style={headingStyle}>Hotel</h1>
+            <h2 style={{...headingStyleTMP, color: 'white', fontWeight: 'bold'}}>Press "Next" to continue...</h2>
             <Link to="/Welcome" className='btn btn-default border bg-light text-decoration-none' style={buttonStyle}> Next </Link>
         </div>
     );
