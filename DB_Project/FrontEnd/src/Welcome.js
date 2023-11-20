@@ -50,9 +50,9 @@ function Welcome()
 
     return (
         <div style={containerStyle}>
-            <Link to="/Welcome" className='btn btn-default text-decoration-none' style={{...buttonStyle1, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Level 1 </Link>
-            <Link to="/Welcome" className='btn btn-default text-decoration-none' style={{...buttonStyle2, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Level 2 </Link>
-            <Link to="/Welcome" className='btn btn-default text-decoration-none' style={{...buttonStyle3, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Level 3 </Link>
+            <Link to="/Page/First" className='btn btn-default text-decoration-none' style={{...buttonStyle1, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Level 1 </Link>
+            <Link to="/Page/Second" className='btn btn-default text-decoration-none' style={{...buttonStyle2, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Level 2 </Link>
+            <Link to="/Page/Third" className='btn btn-default text-decoration-none' style={{...buttonStyle3, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Level 3 </Link>
             <Link to="/Home" className='btn btn-default text-decoration-none' style={{...buttonStyle4, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Home </Link>
 
         </div>
