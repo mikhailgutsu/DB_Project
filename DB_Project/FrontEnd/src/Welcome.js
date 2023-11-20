@@ -19,23 +19,42 @@ function Welcome()
         position: 'absolute',
         top: '385px',
         left: '695px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
     };
     const buttonStyle2 = {
         position: 'absolute',
         top: '270px',
         left: '695px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
     };
     const buttonStyle3 = {
         position: 'absolute',
         top: '155px',
         left: '695px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
+    };
+    const buttonStyle4 = {
+        position: 'absolute',
+        top: '495px',
+        left: '700px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
     };
 
     return (
         <div style={containerStyle}>
-            <Link to="/Welcome" className='btn btn-default text-decoration-none' style={{...buttonStyle1, fontSize: '24px', fontWeight: 'bold', color: 'black'}}> Level 1 </Link>
-            <Link to="/Welcome" className='btn btn-default text-decoration-none' style={{...buttonStyle2, fontSize: '24px', fontWeight: 'bold', color: 'black'}}> Level 2 </Link>
-            <Link to="/Welcome" className='btn btn-default text-decoration-none' style={{...buttonStyle3, fontSize: '24px', fontWeight: 'bold', color: 'black'}}> Level 3 </Link>
+            <Link to="/Welcome" className='btn btn-default text-decoration-none' style={{...buttonStyle1, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Level 1 </Link>
+            <Link to="/Welcome" className='btn btn-default text-decoration-none' style={{...buttonStyle2, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Level 2 </Link>
+            <Link to="/Welcome" className='btn btn-default text-decoration-none' style={{...buttonStyle3, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Level 3 </Link>
+            <Link to="/Home" className='btn btn-default text-decoration-none' style={{...buttonStyle4, fontSize: '24px', fontWeight: 'bold', color: 'white'}}> Home </Link>
+
         </div>
     );
 
