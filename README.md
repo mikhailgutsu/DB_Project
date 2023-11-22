@@ -1,5 +1,5 @@
 # DB_Project
-UTM - Data Base Project (Hostel)
+DB project for a Hostel
 
 React.js project (Node.js + mySQL back)
  
