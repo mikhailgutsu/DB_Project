@@ -59,4 +59,21 @@ app.post('/login',[    check('email', "Emaill length error").isEmail().isLength(
             }
         })
     })
+
+//---------------------------------Test
+app.get('/getdata', (req, res) => {
+    const sql = "SELECT * FROM first"; // Предполагается, что таблица называется "first"
+
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.error("Error:", err);
+            return res.status(500).json({ error: "An error occurred" });
+        }
+
+        // Отправляем данные в ответ
+        return res.json(data);
+    });
+});
+//--------------------------------------
+
 app.listen(8081, ()=> {    console.log("listening");})
