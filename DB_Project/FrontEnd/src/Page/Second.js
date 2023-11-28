@@ -32,8 +32,8 @@ function Second() {
 
     return (
         <div style={containerStyle}>
-            <h1>Data from MySQL Table</h1>
-            <table border="1" style={{ color: 'white', textAlign: 'center' }}>
+            <h1>Nr. 11-20 :</h1>
+            <table style={{ color: 'white', textAlign: 'center' }}>
                 <thead>
                 <tr>
                     <th>Nr</th>
