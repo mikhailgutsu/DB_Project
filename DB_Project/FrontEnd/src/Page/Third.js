@@ -22,7 +22,7 @@ function Third() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://localhost:8081/getdata');
+            const response = await fetch('http://localhost:8081/getdata3');
             const jsonData = await response.json();
             setData(jsonData);
         } catch (error) {
