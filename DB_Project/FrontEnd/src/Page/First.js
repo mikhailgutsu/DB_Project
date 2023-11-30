@@ -48,6 +48,15 @@ function First() {
         textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
     };
 
+    const buttonStyle3 = {
+        position: 'absolute',
+        top: '630px',
+        left: '700px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
+    };
+
     return (
         <div>
             <div style={containerStyle}>
@@ -85,6 +94,7 @@ function First() {
             </div>
             <Link to="/Page/Second" className='btn btn-default text-decoration-none' style={buttonStyle}> Next </Link>
             <Link to="/Welcome" className='btn btn-default text-decoration-none' style={buttonStyle2}> Home </Link>
+            <Link to="/Page/Info" className='btn btn-default text-decoration-none' style={buttonStyle3}> Info </Link>
         </div>
     );
 }
