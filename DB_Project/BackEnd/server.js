@@ -103,5 +103,19 @@ app.get('/getdata3', (req, res) => {
     });
 });
 //--------------------------------------
+app.get('/getdata4', (req, res) => {
+    const sql = "SELECT * FROM info"; // Предполагается, что таблица называется "first"
+
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.error("Error:", err);
+            return res.status(500).json({ error: "An error occurred" });
+        }
+
+        // Отправляем данные в ответ
+        return res.json(data);
+    });
+});
+//--------------------------------------
 
 app.listen(8081, ()=> {    console.log("listening");})
