@@ -47,6 +47,51 @@ function Info() {
         }
     };
 
+    const buttonStyle = {
+        position: 'absolute',
+        top: '90px',
+        left: '380px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
+    };
+
+    const buttonStyle2 = {
+        position: 'absolute',
+        top: '90px',
+        left: '490px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
+    };
+
+    const buttonStyle3 = {
+        position: 'absolute',
+        top: '90px',
+        left: '600px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
+    };
+
+    const buttonStyle4 = {
+        position: 'absolute',
+        top: '90px',
+        left: '710px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
+    };
+
+    const buttonStyle5 = {
+        position: 'absolute',
+        top: '90px',
+        left: '810px',
+        fontSize: '32px',
+        color: 'white', // Задает белый цвет текста
+        textShadow: '2px 2px 2px black', // Задает черную обводку (тень) текста
+    };
+
     return(
         <div>
             <div style={containerStyle}>
@@ -68,6 +113,11 @@ function Info() {
                     </tbody>
                 </table>
             </div>
+            <Link to="/Page/Rooms/fst" className='btn btn-default text-decoration-none' style={buttonStyle}> 1 </Link>
+            <Link to="/Page/Rooms/scnd" className='btn btn-default text-decoration-none' style={buttonStyle2}> 2 </Link>
+            <Link to="/Page/Rooms/third" className='btn btn-default text-decoration-none' style={buttonStyle3}> 3 </Link>
+            <Link to="/Page/Rooms/fr" className='btn btn-default text-decoration-none' style={buttonStyle4}> 4 </Link>
+            <Link to="/Page/Rooms/five" className='btn btn-default text-decoration-none' style={buttonStyle5}> 5 </Link>
         </div>
     );
 }

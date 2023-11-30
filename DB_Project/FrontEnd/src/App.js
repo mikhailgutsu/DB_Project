@@ -8,6 +8,11 @@ import First from "./Page/First";
 import Second from "./Page/Second";
 import Third from "./Page/Third";
 import Info from "./Page/Info";
+import Fst from "./Page/Rooms/fst";
+import Scnd from "./Page/Rooms/scnd";
+import Thirdd from "./Page/Rooms/third";
+import Fr from "./Page/Rooms/fr";
+import Five from "./Page/Rooms/five";
 
 function App()
 {
@@ -22,6 +27,11 @@ function App()
           <Route path='/page/second' element={<Second />}></Route>
           <Route path='/page/third' element={<Third />}></Route>
           <Route path='/page/info' element={<Info />}></Route>
+          <Route path='/page/rooms/fst' element={<Fst />}></Route>
+          <Route path='/page/rooms/scnd' element={<Scnd />}></Route>
+          <Route path='/page/rooms/third' element={<Thirdd />}></Route>
+          <Route path='/page/rooms/fr' element={<Fr />}></Route>
+          <Route path='/page/rooms/five' element={<Five />}></Route>
         </Routes>
       </BrowserRouter>
   )
