@@ -13,6 +13,11 @@ import Scnd from "./Page/Rooms/scnd";
 import Thirdd from "./Page/Rooms/third";
 import Fr from "./Page/Rooms/fr";
 import Five from "./Page/Rooms/five";
+import Six from "./Page/Rooms/six";
+import Seven from "./Page/Rooms/seven";
+import Eight from "./Page/Rooms/eight";
+import Nine from "./Page/Rooms/nine";
+import Ten from "./Page/Rooms/ten";
 
 function App()
 {
@@ -32,6 +37,11 @@ function App()
           <Route path='/page/rooms/third' element={<Thirdd />}></Route>
           <Route path='/page/rooms/fr' element={<Fr />}></Route>
           <Route path='/page/rooms/five' element={<Five />}></Route>
+          <Route path='/page/rooms/six' element={<Six />}></Route>
+          <Route path='/page/rooms/seven' element={<Seven />}></Route>
+          <Route path='/page/rooms/eight' element={<Eight />}></Route>
+          <Route path='/page/rooms/nine' element={<Nine />}></Route>
+          <Route path='/page/rooms/ten' element={<Ten />}></Route>
         </Routes>
       </BrowserRouter>
   )
