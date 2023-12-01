@@ -343,11 +343,11 @@ function Info() {
             <Link to="/Page/Rooms/third" className='btn btn-default text-decoration-none' style={buttonStyle3}> 3 </Link>
             <Link to="/Page/Rooms/fr" className='btn btn-default text-decoration-none' style={buttonStyle4}> 4 </Link>
             <Link to="/Page/Rooms/five" className='btn btn-default text-decoration-none' style={buttonStyle5}> 5 </Link>
-            <Link to="/Page/Rooms/fst" className='btn btn-default text-decoration-none' style={buttonStyle6}> 6 </Link>
-            <Link to="/Page/Rooms/scnd" className='btn btn-default text-decoration-none' style={buttonStyle7}> 7 </Link>
-            <Link to="/Page/Rooms/third" className='btn btn-default text-decoration-none' style={buttonStyle8}> 8 </Link>
-            <Link to="/Page/Rooms/fr" className='btn btn-default text-decoration-none' style={buttonStyle9}> 9 </Link>
-            <Link to="/Page/Rooms/five" className='btn btn-default text-decoration-none' style={buttonStyle10}> 10 </Link>
+            <Link to="/Page/Rooms/six" className='btn btn-default text-decoration-none' style={buttonStyle6}> 6 </Link>
+            <Link to="/Page/Rooms/seven" className='btn btn-default text-decoration-none' style={buttonStyle7}> 7 </Link>
+            <Link to="/Page/Rooms/eight" className='btn btn-default text-decoration-none' style={buttonStyle8}> 8 </Link>
+            <Link to="/Page/Rooms/nine" className='btn btn-default text-decoration-none' style={buttonStyle9}> 9 </Link>
+            <Link to="/Page/Rooms/ten" className='btn btn-default text-decoration-none' style={buttonStyle10}> 10 </Link>
 
             <Link to="/Page/Rooms/eleven" className='btn btn-default text-decoration-none' style={buttonStyle11}> 11 </Link>
             <Link to="/Page/Rooms/twelv" className='btn btn-default text-decoration-none' style={buttonStyle12}> 12 </Link>
