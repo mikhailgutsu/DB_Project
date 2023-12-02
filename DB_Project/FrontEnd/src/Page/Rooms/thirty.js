@@ -3,8 +3,6 @@ import pickImage from "./assets/ab.jpg";
 
 function Thirty()
 {
-
-
     const containerStyle = {
         background: `url(${pickImage})`,
         backgroundSize: 'cover',
