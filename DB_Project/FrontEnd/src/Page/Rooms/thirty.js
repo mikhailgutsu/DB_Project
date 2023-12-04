@@ -12,7 +12,7 @@ function Thirty()
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        color: 'white', // Добавил белый цвет текста для читаемости на фоне изображения
+        color: 'white', 
     };
 
     return(
