@@ -111,8 +111,7 @@ app.get('/getdata4', (req, res) => {
             console.error("Error:", err);
             return res.status(500).json({ error: "An error occurred" });
         }
-
-        // Отправляем данные в ответ
+        
         return res.json(data);
     });
 });
