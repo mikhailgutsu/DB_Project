@@ -1,3 +1,18 @@
+/*
+
+        Mihai-Gutu-CR-211FR | Hostel Project for DB.mysql
+                       * BackEnd server.js *
+
+        Git - https://github.com/mikhailgutsu/DB_Project
+
+        used:
+            - Open Server Port,
+            - MYSQL + phpmyadmin,
+            - Framework-Node.js
+            - GitHub
+
+ */
+
 // <-------------------------------------------------------     Definitions
 const express = require("express");
 const mysql = require('mysql');
